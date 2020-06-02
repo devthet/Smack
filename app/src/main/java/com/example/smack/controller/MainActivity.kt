@@ -1,5 +1,6 @@
-package com.example.smack
+package com.example.smack.controller
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
@@ -8,6 +9,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
+import com.example.smack.R
 import com.example.smack.model.Channel
 import com.example.smack.services.DataService
 import kotlinx.android.synthetic.main.activity_main.*
@@ -62,7 +64,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun loginBtnNavClicked(view:View){
-
+        val loginIntent = Intent(this, LoginActivity::class.java)
+        startActivity(loginIntent)
     }
     fun addChannelClicked(view: View){
 
